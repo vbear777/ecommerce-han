@@ -13,7 +13,7 @@ export function SearchPage({ cart, loadCart }) {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const res = await axios.get("/api/products");
+            const res = await axios.get('data/products.json');
             const allProducts = res.data;
 
             const filtered = allProducts.filter((p) =>

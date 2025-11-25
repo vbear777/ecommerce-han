@@ -16,11 +16,10 @@ export function DeliveryOptions({ cartItem, deliveryOptions, loadCart }) {
                 }
 
                 const updateDeliveryOption = async () => {
-                    await axios.put(`/api/cart-items/${cartItem.productId}`, {
-                        deliveryOptionId: deliveryOption.id
-                    });
-                    await loadCart();
+                    cartItem.deliveryOptionId = deliveryOption.id; // update state
+                    await loadCart(); // refresh UI
                 };
+
 
                 return (
                         <div key={deliveryOption.id} className="delivery-option"

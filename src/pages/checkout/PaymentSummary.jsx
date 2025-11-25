@@ -6,10 +6,12 @@ export function PaymentSummary({ paymentSummary, loadCart }) {
     const navigate = useNavigate();
 
     const createOrder = async () => {
-        await axios.post('/api/orders');
+        alert("Order placed! (Static only, no saving)");
         await loadCart();
-        navigate('/api/orders');
+        navigate('/orders');
     };
+
+
 
     return (
         <div className="payment-summary">

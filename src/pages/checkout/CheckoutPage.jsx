@@ -12,10 +12,10 @@ export function CheckoutPage({ cart, loadCart }){
 
     useEffect(() => {
         const fetchCheckoutData = async () => {
-        let response = await axios.get('/api/delivery-options?expand=estimatedDeliveryTime');
+        let response = await axios.get('/data/deliveryOptions.json');
             setDeliveryOptions(response.data);
 
-        response = await axios.get('/api/payment-summary');
+        response = await axios.get('/data/paymentSummary.json');
             setPaymentSummary(response.data);
         };
     
@@ -30,8 +30,8 @@ export function CheckoutPage({ cart, loadCart }){
                 <div className="header-content">
                     <div className="checkout-header-left-section">
                     <a href="/">
-                        <img className="logo" src="images/hclogo.png" />
-                        <img className="mobile-logo" src="images/hclogo.png" />
+                        <img className="logo" src="/images/hclogo.png" />
+                        <img className="mobile-logo" src="/images/hclogo.png" />
                     </a>
                     </div>
 
@@ -41,7 +41,7 @@ export function CheckoutPage({ cart, loadCart }){
                     </div>
 
                     <div className="checkout-header-right-section">
-                    <img src="images/icons/checkout-lock-icon.png" />
+                    <img src="/images/icons/checkout-lock-icon.png" />
                     </div>
                 </div>
                 </div>

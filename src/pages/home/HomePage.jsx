@@ -9,7 +9,7 @@ export function HomePage({ cart, loadCart }) {
 /*
     useEffect(() => {
     const reset = async () => {
-        await axios.post('/api/reset');
+        await axios.post(`\${import.meta.env.VITE_API_BASE || '/api'}/reset`);
         console.log("Database reset!");
     };
 
@@ -19,7 +19,7 @@ export function HomePage({ cart, loadCart }) {
 */
     useEffect(() => {
         const getHomeData = async () => {
-        const response = await axios.get('/api/products');
+        const response = await axios.get('data/products.json');
             setProducts(response.data);
         };
 

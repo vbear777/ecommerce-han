@@ -1,0 +1,17 @@
+[
+  {
+    "productId": "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
+    "quantity": 2,
+    "deliveryOptionId": "1"
+  },
+  {
+    "productId": "5968897c-4d27-4872-89f6-5bcb052746d7",
+    "quantity": 1,
+    "deliveryOptionId": "2"
+  },
+  {
+    "productId": "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
+    "quantity": 1,
+    "deliveryOptionId": "3"
+  }
+]

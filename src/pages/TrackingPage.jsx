@@ -13,7 +13,7 @@ export function TrackingPage(){
         document.title = "Tracking | Haeco"
 
         const loadCart = async () => {
-            const response = await axios.get(`/api/orders/${orderId}?expand=products`);
+            const response = await axios.get('data/orders/products.json');
             setOrder(response.data);
         };
 
@@ -41,7 +41,7 @@ export function TrackingPage(){
 
             <div className="tracking-page">
                 <div className="order-tracking">
-                    <a className="back-to-orders-link link-primary" href="/api/orders">
+                    <a className="back-to-orders-link link-primary" href={`${import.meta.env.VITE_API_BASE_URL}`}>
                     View all orders
                     </a>
                     
