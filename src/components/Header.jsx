@@ -40,7 +40,7 @@ export function Header({ cart = [] }){
             </div>
 
             <div className="right-section">
-                 <Link className="orders-link header-link" to="/orders">
+                 <Link className="orders-link header-link" to="/api/orders">
                     <span className="orders-text">Orders</span>
                 </Link>
 

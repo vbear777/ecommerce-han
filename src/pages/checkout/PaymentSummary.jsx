@@ -8,7 +8,7 @@ export function PaymentSummary({ paymentSummary, loadCart }) {
     const createOrder = async () => {
         await axios.post('/api/orders');
         await loadCart();
-        navigate('/orders');
+        navigate('/api/orders');
     };
 
     return (
